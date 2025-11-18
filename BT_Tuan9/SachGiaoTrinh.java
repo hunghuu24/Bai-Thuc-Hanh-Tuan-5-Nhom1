@@ -1,5 +1,4 @@
-import java.io.Serializable;
-public class SachGiaoTrinh extends Sach implements Serializable {
+public class SachGiaoTrinh extends Sach{
     private String monHoc;
     private String capDo;
     private String viTri;

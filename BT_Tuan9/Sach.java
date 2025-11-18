@@ -72,12 +72,30 @@ public abstract class Sach implements IGiaBan, IkiemKe, Serializable {
         this.tieuDe = sc.nextLine();
         System.out.print("Nhap tac gia: ");
         this.tacGia = sc.nextLine();
-        System.out.print("Nhap nam xuat ban: ");
-        this.namXuatBan = Integer.parseInt(sc.nextLine());
-        System.out.print("Nhap so luong: ");
-        this.soLuong = Integer.parseInt(sc.nextLine());
-        System.out.print("Nhap gia co ban: ");
-        this.giaCoBan = Double.parseDouble(sc.nextLine());
+        while (true) {
+            System.out.print("Nhap nam xuat ban: ");
+            this.namXuatBan = Integer.parseInt(sc.nextLine());
+            if(this.namXuatBan > 0) 
+                break;
+            else
+                System.out.println("Nam xuat ban khong hop le");
+        }
+        while(true) {
+            System.out.print("Nhap so luong: ");
+            this.soLuong = Integer.parseInt(sc.nextLine());
+            if(this.soLuong >= 0)
+                break;
+            else
+                System.out.println("So luong khong hop le");
+        }
+        while(true) {
+            System.out.print("Nhap gia co ban: ");
+            this.giaCoBan = Double.parseDouble(sc.nextLine());
+            if(this.giaCoBan >= 0)
+                break;
+            else
+                System.out.println("Gia co ban khong hop le");
+        }
     }
     @Override
     public String toString() {

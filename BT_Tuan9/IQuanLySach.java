@@ -1,8 +1,8 @@
 public interface IQuanLySach {
     public void ThemSach();
-    public void XoaSach();
-    public void SuaSach();
-    public void TimKiemSach();
+    public boolean XoaSach(String maSach);
+    public boolean SuaSach(String maSach);
+    public Sach TimKiemSach(String maSach);
     public void sapXepSach();
     public void HienThiSach();
     public int tongSoLuong();
